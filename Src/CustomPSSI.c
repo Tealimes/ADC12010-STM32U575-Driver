@@ -29,8 +29,8 @@ void PSSI_GPDMA1_INIT(uint16_t * sram_buffer){
 	GPIOE->MODER |= (2U << 2U*6U); // PE6 D7
 	GPIOC->MODER |= (2U << 2U*10U); // PC10 D8
 	GPIOC->MODER |= (2U << 2U*12U); // PC12 D9
-	GPIOD->MODER |= (2U << 2U*10U); // PD6 D10
-	GPIOD->MODER |= (2U << 2U*11U); // PD2 D11
+	//GPIOD->MODER |= (2U << 2U*10U); // PD6 D10
+	//GPIOD->MODER |= (2U << 2U*11U); // PD2 D11
 
 	// set alternate function mode to PSSI logic
 	GPIOC->AFR[0] |= (0xAU << 4U*6U); // AF10 PC6 D0
@@ -43,8 +43,8 @@ void PSSI_GPDMA1_INIT(uint16_t * sram_buffer){
 	GPIOE->AFR[0] |= (0xAU << 4U*6U); // AF10 PE6 D7
 	GPIOC->AFR[1] |= (0xAU << 4U*2U); // AF10 PC10 D8
 	GPIOC->AFR[1] |= (0xAU << 4U*4U); // AF10 PC12 D9
-	GPIOD->AFR[0] |= (0x4U << 4U*6U); // AF4 PD6 D10
-	GPIOD->AFR[0] |= (0xAU << 4U*2U); // AF10 PD2 D11
+	//GPIOD->AFR[0] |= (0x4U << 4U*6U); // AF4 PD6 D10
+	//GPIOD->AFR[0] |= (0xAU << 4U*2U); // AF10 PD2 D11
 	GPIOD->AFR[0] |= 0x01;
 
 	// PDCK GPIO PD9
